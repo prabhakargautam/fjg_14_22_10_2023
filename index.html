@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Show/Hide Content</title>
+</head>
+<body>
+<h2> Java Script Output Program</h2>
+<p> Click on button  </p>
+<p>Paragraph will open in first click, 
+   image will open in second click.  </p>
+
+    <button onclick="toggleContent()">Show Paragraph</button>
+    <p id="paragraph" style="display: none;">What is JavaScript?
+JavaScript is a powerful programming language that can add interactivity to a website. It was invented by Brendan Eich.</p>
+    <img id="image" src="https://s.yimg.com/fz/api/res/1.2/9OnrL2tSJp2tbzofgxwMSQ--~C/YXBwaWQ9c3JjaGRkO2ZpPWZpbGw7aD0zODQ7cT04MDt3PTUxMg--/https://s.yimg.com/am/60d/34c4aa77d758f50a0df533a3814f2868" alt="An Image" style="display: none;">
+
+    <script>
+        let isParagraphVisible = false;
+
+        function toggleContent() {
+            const paragraph = document.getElementById("paragraph");
+            const image = document.getElementById("image");
+
+            if (isParagraphVisible) {
+                paragraph.style.display = "none";
+                image.style.display = "block";
+                isParagraphVisible = false;
+            } else {
+                paragraph.style.display = "block";
+                image.style.display = "none";
+                isParagraphVisible = true;
+            }
+        }
+    </script>
+<br> 
+
+
+<h1>Using window.alert()</h1>
+<p>You can use an alert box to display data:</p>
+
+<script>
+window.alert(105 + 105);
+</script>
+<br>
+
+<h1>Using console.log()</h1>
+<p>You can use console section to display data:</p>
+
+<script>
+console.log(555 + 5);
+</script>
+<br>
+<h2>The window.print() Method</h2>
+
+<p>Click the button to print the current page.</p>
+
+<button onclick="window.print()">Print this page</button>
+<br>
+<h1>Inline JavaScript</h1>
+    <button onclick="displayMessage()">Click me</button>
+
+    <script>
+        function displayMessage() {
+            alert("This is an inline JavaScript alert.");
+        }
+    </script>
+
+    <h2>Demo External JavaScript</h2>
+
+<p id="demo">A Paragraph.</p>
+
+<button type="button" onclick="myFunction()">Try it</button>
+
+<p>This example links to "myScript.js".</p>
+<p>(myFunction is stored in "myScript.js")</p>
+
+<script src="myScript.js"></script>
+
+
+<br>
+<h2>JavaScript Arithmetic</h2>
+<p>A typical arithmetic operation takes two numbers and produces a new number.</p>
+
+<p id="demo"></p>
+
+<script>
+let x = 100 + 50;
+document.getElementById("demo").innerHTML = x;
+</script>
+
+
+</body>
+</html> 
+
